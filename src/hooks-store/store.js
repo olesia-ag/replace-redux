@@ -27,11 +27,11 @@ export const useStore = () => {
 	return [globalState, dispatch]
 }
 
-export const initSore = (userActions, initialState) => {
+export const initStore = (userActions, initialState) => {
 	if (initialState) {
 		globalState = {
 			...globalState,
-			initialState,
+			...initialState,
         }
         actions = {...actions, ...userActions}
 	}
